@@ -20,9 +20,12 @@ const ContactForm = ({onSubmit}: Props) => {
         <Input name="name">Nombre</Input>
         <Input name="lastname">Apellido</Input>
         <Input name="email">Email</Input>
-        <Select options={contactTypeOption}/>
-        <MyButton>
+        <Select name="type" label="Tipo" defaultMessage="--Selecciona tipo-- " options={contactTypeOption}/>
+        <MyButton type="submit">
             Enviar
+        </MyButton>
+        <MyButton   onClick={()=> methods.reset()} variant="secondary">
+            Limpiar
         </MyButton>
        
       </form>
